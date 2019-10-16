@@ -190,7 +190,7 @@ public extension UITextView {
     
 }
 
-private extension CGPoint {
+public extension CGPoint {
 
     func integral(withScaleFactor scaleFactor: CGFloat) -> CGPoint {
         guard scaleFactor > 0.0 else {
