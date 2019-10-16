@@ -30,7 +30,7 @@ open class SubviewAttachingTextViewBehavior: NSObject, NSLayoutManagerDelegate, 
 
     // MARK: Subview tracking
 
-    private let attachedViews = NSMapTable<TextAttachedViewProvider, UIView>.strongToStrongObjects()
+    public let attachedViews = NSMapTable<TextAttachedViewProvider, UIView>.strongToStrongObjects()
     private var attachedProviders: Array<TextAttachedViewProvider> {
         return Array(self.attachedViews.keyEnumerator()) as! Array<TextAttachedViewProvider>
     }
