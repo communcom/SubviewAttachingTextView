@@ -119,7 +119,8 @@ open class SubviewAttachingTextViewBehavior: NSObject, NSLayoutManagerDelegate, 
         }
     }
 
-    private static func boundingRect(forAttachmentCharacterAt characterIndex: Int, layoutManager: NSLayoutManager) -> CGRect? {
+    @objc
+    open static func boundingRect(forAttachmentCharacterAt characterIndex: Int, layoutManager: NSLayoutManager) -> CGRect? {
         let glyphRange = layoutManager.glyphRange(forCharacterRange: NSMakeRange(characterIndex, 1), actualCharacterRange: nil)
         let glyphIndex = glyphRange.location
         guard glyphIndex != NSNotFound && glyphRange.length == 1 else {
