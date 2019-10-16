@@ -203,7 +203,7 @@ private extension CGPoint {
 
 }
 
-private extension NSAttributedString {
+public extension NSAttributedString {
 
     var subviewAttachmentRanges: [(attachment: SubviewTextAttachment, range: NSRange)] {
         var ranges = [(SubviewTextAttachment, NSRange)]()
